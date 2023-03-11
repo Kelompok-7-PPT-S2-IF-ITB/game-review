@@ -11,6 +11,8 @@ RUN curl -sSL curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/poe
 # Copy poetry.lock* in case it doesn't exist in the repo
 COPY ./app/pyproject.toml ./app/poetry.lock* /app/
 
+RUN bash -c "pip install --upgrade pip"
+
 # Allow installing dev dependencies to run tests
 ARG INSTALL_DEV=false
 RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then poetry install --no-root ; else poetry install --no-root --no-dev ; fi"
