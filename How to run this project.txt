@@ -1,0 +1,14 @@
+Cara menjalankan project game review:
+1. aktifkan wsl: 
+	wsl
+2. pastikan sudah masuk ke dalam root folder game review, jika belum maka jalankan command: 
+	cd path_to_root_folder (rumus)
+	cd ../../../d/Proyek\ Penelitian\ Terapan/game-review/
+   jika sudah masuk ke dalam root folder game review:
+	docker-compose build (jalankan untuk pertama kali saja), jika docker belum aktif maka cek dengan command:
+	service status docker
+   Apabila status is not running maka jalankan:
+	service start docker
+
+3. Jalankan perintah berikut untuk start Docker
+	docker-compose up 
