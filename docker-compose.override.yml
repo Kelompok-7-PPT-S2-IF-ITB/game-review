@@ -46,4 +46,4 @@ services:
       args:
         FRONTEND_ENV: dev
     ports:
-      - "3000:3000"
+      - "3001:3001"
