@@ -58,6 +58,8 @@ services:
     env_file:
       - .env
     hostname: backend
+    volumes:
+      - app-backend-data:/app
     environment:
       - SERVER_NAME=${DOMAIN}
       - SERVER_HOST=https://${DOMAIN}
@@ -76,6 +78,8 @@ services:
       - queue
     env_file:
       - .env
+    volumes:
+      - app-celery-data:/app
     environment:
       - SERVER_NAME=${DOMAIN}
       - SERVER_HOST=https://${DOMAIN}
@@ -90,10 +94,38 @@ services:
   frontend:
     image: '${DOCKER_IMAGE_FRONTEND?Variable not set}:${TAG-latest}'
     hostname: frontend
+    volumes:
+      - app-frontend-data:/app
     build:
       context: ./frontend
       args:
         FRONTEND_ENV: ${FRONTEND_ENV-production}
+  
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    hostname: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - PASSWORD=P@ssw0rd #optional
+      - HASHED_PASSWORD= #optional
+      - SUDO_PASSWORD=P@ssw0rd #optional
+      - SUDO_PASSWORD_HASH= #optional
+      - PROXY_DOMAIN=code-server.my.domain #optional
+      - DEFAULT_WORKSPACE=/gamereview/ #optional
+    volumes:
+      - ./code-server/config:/config
+      - app-frontend-data:/gamereview/
+      - app-backend-data:/gamereview-backend/
+      - app-celery-data:/gamereview-celery/
+    ports:
+      - 8443:8443
+    restart: unless-stopped
 
 volumes:
   app-db-data:
+  app-frontend-data:
+  app-backend-data:
+  app-celery-data:
