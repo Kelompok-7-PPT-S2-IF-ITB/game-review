@@ -2,9 +2,11 @@ version: "3.3"
 services:
 
   proxy:
-    image: haproxy:latest
+    #image: haproxy:latest
+    image: nginx:stable
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      #- ./reverseproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - ./reverseproxy/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 8090:80
 

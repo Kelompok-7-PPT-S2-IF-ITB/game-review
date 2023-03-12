@@ -18,6 +18,11 @@ services:
     environment:
       - JUPYTER=jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.custom_display_url=http://127.0.0.1:8888
       - SERVER_HOST=http://${DOMAIN}
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 2048M
     build:
       context: ./backend
       dockerfile: backend.dockerfile
