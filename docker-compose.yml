@@ -120,6 +120,10 @@ services:
       - app-frontend-data:/gamereview/
       - app-backend-data:/gamereview-backend/
       - app-celery-data:/gamereview-celery/
+    depends_on:
+      - backend
+      - celeryworker
+      - frontend
     ports:
       - 8443:8443
     restart: unless-stopped
