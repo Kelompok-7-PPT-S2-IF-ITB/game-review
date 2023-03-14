@@ -58,8 +58,6 @@ services:
     env_file:
       - .env
     hostname: backend
-    volumes:
-      - app-backend-data:/app
     environment:
       - SERVER_NAME=${DOMAIN}
       - SERVER_HOST=https://${DOMAIN}
@@ -78,8 +76,6 @@ services:
       - queue
     env_file:
       - .env
-    volumes:
-      - app-celery-data:/app
     environment:
       - SERVER_NAME=${DOMAIN}
       - SERVER_HOST=https://${DOMAIN}
@@ -95,7 +91,8 @@ services:
     image: '${DOCKER_IMAGE_FRONTEND?Variable not set}:${TAG-latest}'
     hostname: frontend
     volumes:
-      - app-frontend-data:/app
+      - ./frontend:/app
+    command: sh -c "npm install --force && exec npm start"
     build:
       context: ./frontend
       args:
@@ -117,9 +114,7 @@ services:
       - DEFAULT_WORKSPACE=/gamereview/ #optional
     volumes:
       - ./code-server/config:/config
-      - app-frontend-data:/gamereview/
-      - app-backend-data:/gamereview-backend/
-      - app-celery-data:/gamereview-celery/
+      - ./:/gamereview/
     depends_on:
       - backend
       - celeryworker
@@ -130,6 +125,3 @@ services:
 
 volumes:
   app-db-data:
-  app-frontend-data:
-  app-backend-data:
-  app-celery-data:

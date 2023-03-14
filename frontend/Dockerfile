@@ -1,5 +1,4 @@
 FROM node:lts-alpine
 WORKDIR /app
-COPY . .
-RUN npm install
-CMD ["npm", "run", "start"]
+
+CMD ["bash", "-c", "while true; do sleep 1; done"]
