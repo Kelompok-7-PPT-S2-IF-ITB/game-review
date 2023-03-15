@@ -34,12 +34,12 @@ const AdminNavbar = () => {
     <>
       <Navbar className="navbar-top navbar-horizontal navbar-dark" expand="md">
         <Container className="px-4">
-          <NavbarBrand to="/" tag={Link}>
+          {/* <NavbarBrand to="/" tag={Link}>
             <img
               alt="..."
               src={require("../../assets/img/brand/argon-react-white.png")}
             />
-          </NavbarBrand>
+          </NavbarBrand> */}
           <button className="navbar-toggler" id="navbar-collapse-main">
             <span className="navbar-toggler-icon" />
           </button>
@@ -64,7 +64,7 @@ const AdminNavbar = () => {
             </div>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="nav-link-icon" to="/" tag={Link}>
+                <NavLink className="nav-link-icon" to="/admin/dashboard" tag={Link}>
                   <i className="ni ni-planet" />
                   <span className="nav-link-inner--text">Dashboard</span>
                 </NavLink>
@@ -72,27 +72,27 @@ const AdminNavbar = () => {
               <NavItem>
                 <NavLink
                   className="nav-link-icon"
-                  to="/auth/register"
+                  to="/admin/list-game"
                   tag={Link}
                 >
                   <i className="ni ni-circle-08" />
-                  <span className="nav-link-inner--text">Register</span>
+                  <span className="nav-link-inner--text">Games</span>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link-icon" to="/auth/login" tag={Link}>
+                <NavLink className="nav-link-icon" to="/admin/about-us" tag={Link}>
                   <i className="ni ni-key-25" />
-                  <span className="nav-link-inner--text">Login</span>
+                  <span className="nav-link-inner--text">About Us</span>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
                   className="nav-link-icon"
-                  to="/admin/user-profile"
+                  to="/admin/account"
                   tag={Link}
                 >
                   <i className="ni ni-single-02" />
-                  <span className="nav-link-inner--text">Profile</span>
+                  <span className="nav-link-inner--text">Account</span>
                 </NavLink>
               </NavItem>
             </Nav>
