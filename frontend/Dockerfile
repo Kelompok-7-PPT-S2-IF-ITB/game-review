@@ -1,4 +1,7 @@
 FROM node:lts-alpine
-WORKDIR /app
 
-CMD ["bash", "-c", "while true; do sleep 1; done"]
+WORKDIR /frontend
+COPY . .
+
+RUN npm install --force
+CMD ["npm", "run", "start"]
