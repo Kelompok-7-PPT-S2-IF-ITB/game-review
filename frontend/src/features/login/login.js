@@ -39,14 +39,19 @@ import "layouts/style-auth.css"
         <Col lg="5" md="7">
           <Card className="card-login">
             <CardHeader className="bg-transparent pb-5">
-              <div className="text-muted text-center mt-2 mb-3">
-                <small>Sign in with</small>
+              <div >
+                <h1 className="text-signin"> Sign in</h1>
+                <h1 className="text-insertlogin"> Enter your email and password to sign in</h1>
+                <h1 className="text-or"> Or</h1>
+                <h1 className="text-dont"> Don’t have any accounts?</h1>
+                <h1 className="text-register"> Register here</h1>
               </div>
               <div className="btn-wrapper text-center">
-                <Button
-                  className="btn-neutral btn-icon"
+                c
+                {/* <Button
+                  className="button-fb"
                   color="default"
-                  href="#pablo"
+                  href=""
                   onClick={(e) => e.preventDefault()}
                 >
                   <span className="btn-inner--icon">
@@ -58,9 +63,9 @@ import "layouts/style-auth.css"
                       }
                     />
                   </span>
-                  <span className="btn-inner--text">Github</span>
-                </Button>
-                <Button
+                  <span className="button-fb-img"></span>
+                </Button> */}
+                {/* <Button
                   className="btn-neutral btn-icon"
                   color="default"
                   href="#pablo"
@@ -76,37 +81,34 @@ import "layouts/style-auth.css"
                     />
                   </span>
                   <span className="btn-inner--text">Google</span>
-                </Button>
+                </Button> */}
               </div>
             </CardHeader>
             <CardBody className="px-lg-5 py-lg-5">
-              <div className="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
-              </div>
               <Form role="form">
                 <FormGroup className="mb-3">
-                  <InputGroup className="input-group-alternative">
+                  <InputGroup className="card-email">
                     <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
+                      {/* <InputGroupText>
                         <i className="ni ni-email-83" />
-                      </InputGroupText>
+                      </InputGroupText> */}
                     </InputGroupAddon>
                     <Input
-                      placeholder="Email"
+                      placeholder="      Email"
                       type="email"
                       autoComplete="new-email"
                     />
                   </InputGroup>
                 </FormGroup>
                 <FormGroup>
-                  <InputGroup className="input-group-alternative">
+                  <InputGroup className="card-password">
                     <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
+                      {/* <InputGroupText>
                         <i className="ni ni-lock-circle-open" />
-                      </InputGroupText>
+                      </InputGroupText> */}
                     </InputGroupAddon>
                     <Input
-                      placeholder="Password"
+                      placeholder="      Password"
                       type="password"
                       autoComplete="new-password"
                     />
@@ -118,15 +120,15 @@ import "layouts/style-auth.css"
                     id=" customCheckLogin"
                     type="checkbox"
                   />
-                  <label
+                  {/* <label
                     className="custom-control-label"
                     htmlFor=" customCheckLogin"
                   >
                     <span className="text-muted">Remember me</span>
-                  </label>
+                  </label> */}
                 </div>
                 <div className="text-center">
-                  <Button className="my-4" color="primary" type="button">
+                  <Button className="button-signin" color="#090909" type="button">
                     Sign in
                   </Button>
                 </div>
