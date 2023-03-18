@@ -1,0 +1,128 @@
+.background-img{
+    position: absolute;
+    width: 1820px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+}
+
+.background-regis{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    background: #0C0C14;
+}
+
+.text-create{
+    position: absolute;
+    width: 591px;
+    height: 73px;
+    left: 35px;
+    top: 20px;
+
+    font-family: 'Decorative';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 73px;
+
+    color:#FFFFFF
+}
+
+.text-already{
+    width: 234px;
+    height: 24px;
+    left: 100px;
+    top: 500px;
+
+    font-family: "Ruda-Black.ttf";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.text-login{
+    position: absolute;
+    width: 104px;
+    height: 24px;
+    left: 300px;
+    top: 100px;
+
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #B5D2EB;
+}
+
+.card-regis{
+    position: absolute;
+    width: 607px;
+    height: 575px;
+    left: -400px;
+    top: 200px;
+    
+    background-color: transparent;
+}
+
+.first-name{
+    position: absolute;
+    width: 195px;
+    height: 60px;
+    left: 50px;
+    top: 170px;
+}
+
+.last-name{
+    position: absolute;
+    width: 195px;
+    height: 60px;
+    left: 270px;
+    top: 170px;
+}
+
+.input-username{
+    position: absolute;
+    width: 415px;
+    height: 60px;
+    left: 50px;
+    top: 230px;
+}
+
+.input-email{
+    position: absolute;
+    width: 415px;
+    height: 60px;
+    left: 50px;
+    top: 290px;
+}
+
+.input-password{
+    position: absolute;
+    width: 415px;
+    height: 60px;
+    left: 50px;
+    top: 350px;
+}
+
+.confirm-password{
+    position: absolute;
+    width: 415px;
+    height: 60px;
+    left: 50px;
+    top: 410px;
+}
+
+.button-create{
+    position: absolute;
+    width: 195px;
+    height: 60px;
+    left: 50px;
+    top: 470px;
+}
