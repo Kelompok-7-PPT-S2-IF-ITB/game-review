@@ -74,7 +74,7 @@ var routes = [
     name: "REGISTRATION",
     icon: "ni ni-circle-08 text-pink",
     component: Registration,
-    layout: "/auth"
+    layout: "/auth-regis"
   },
   {
     path: "/verification-email",
