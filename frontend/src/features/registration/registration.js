@@ -38,16 +38,11 @@ const Registration = () => {
   return (
     <>
       <Col lg="5" md="7">
-        <Card className="card-regis">
-          <CardHeader className="bg-transparent pb-5">
-            <div>
-              <h1 className="text-create">Create your Account</h1>
-              <h1 className="text-already">Already have an account?</h1>
+        <Card className="card-regis">                            
+          <CardBody className="px-lg-5 py-lg-5">
+            <div>            
               <h1 className="text-login">Login here</h1>
             </div>
-            <div className="text-center"></div>
-          </CardHeader>
-          <CardBody className="px-lg-5 py-lg-5">
             <Form role="form">
               <FormGroup>
                 <InputGroup className="first-name">
@@ -104,7 +99,7 @@ const Registration = () => {
               </FormGroup>
             
               <div className="text-center">
-                <Button className="button-create" color="#473153" type="button">
+                <Button className="button-create" type="button">
                   Create account
                 </Button>
               </div>

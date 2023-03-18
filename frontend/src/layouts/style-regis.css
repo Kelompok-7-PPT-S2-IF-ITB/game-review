@@ -14,43 +14,12 @@
     background: #0C0C14;
 }
 
-.text-create{
-    position: absolute;
-    width: 591px;
-    height: 73px;
-    left: 35px;
-    top: 20px;
-
-    font-family: 'Decorative';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 73px;
-
-    color:#FFFFFF
-}
-
-.text-already{
-    width: 234px;
-    height: 24px;
-    left: 100px;
-    top: 500px;
-
-    font-family: "Ruda-Black.ttf";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #FFFFFF;
-}
-
 .text-login{
     position: absolute;
     width: 104px;
     height: 24px;
-    left: 300px;
-    top: 100px;
+    left: 270px;
+    top: 164px;
 
     font-family: 'Ruda';
     font-style: normal;
@@ -75,54 +44,57 @@
     position: absolute;
     width: 195px;
     height: 60px;
-    left: 50px;
-    top: 170px;
+    left: 40px;
+    top: 230px;
+
 }
 
 .last-name{
     position: absolute;
     width: 195px;
     height: 60px;
-    left: 270px;
-    top: 170px;
+    left: 260px;
+    top: 230px;
 }
 
 .input-username{
     position: absolute;
     width: 415px;
     height: 60px;
-    left: 50px;
-    top: 230px;
+    left: 40px;
+    top: 290px;
 }
 
 .input-email{
     position: absolute;
     width: 415px;
     height: 60px;
-    left: 50px;
-    top: 290px;
+    left: 40px;
+    top: 350px;
 }
 
 .input-password{
     position: absolute;
     width: 415px;
     height: 60px;
-    left: 50px;
-    top: 350px;
+    left: 40px;
+    top: 410px;
 }
 
 .confirm-password{
     position: absolute;
     width: 415px;
     height: 60px;
-    left: 50px;
-    top: 410px;
+    left: 40px;
+    top: 470px;
 }
 
 .button-create{
     position: absolute;
     width: 195px;
     height: 60px;
-    left: 50px;
-    top: 470px;
+    left: 40px;
+    top: 550px;
+
+    background-color: #473153;
 }
