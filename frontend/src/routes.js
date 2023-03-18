@@ -31,6 +31,7 @@ import Account from "features/account/account";
 import AboutUs from "features/about-us/aboutus";
 import VerificationEmail from "features/registration/verification-email";
 import VerificationSuccsess from "features/registration/verification-success";
+import SearchGame from "features/dashboard/search";
 
 var routes = [
   {
@@ -38,6 +39,13 @@ var routes = [
     name: "DASHBOARD",
     icon: "ni ni-tv-2 text-primary",
     component: Dashboard,
+    layout: "/admin"
+  },
+  {
+    path: "/search-game",
+    name: "SEARCH GAMES",
+    icon: "ni ni-zoom-split-in text-black",
+    component: SearchGame,
     layout: "/admin"
   },
   {

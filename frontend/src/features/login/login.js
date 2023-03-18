@@ -44,7 +44,7 @@ import "layouts/style-auth.css"
                 <h1 className="text-insertlogin"> Enter your email and password to sign in</h1>
                 <h1 className="text-or"> Or</h1>
                 <h1 className="text-dont"> Don’t have any accounts?</h1>
-                <h1 className="text-register"> Register here</h1>
+                <h1 className="text-register" href="./registration"> Register here</h1>
               </div>
               <div className="btn-wrapper text-center">
                 c
@@ -128,7 +128,7 @@ import "layouts/style-auth.css"
                   </label> */}
                 </div>
                 <div className="text-center">
-                  <Button className="button-signin" color="#090909" type="button">
+                  <Button className="button-signin" color="#090909" type="button" href="/admin/dashboard">
                     Sign in
                   </Button>
                 </div>
