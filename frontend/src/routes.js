@@ -81,7 +81,7 @@ var routes = [
     name: "VERIFICATION EMAIL",
     icon: "ni ni-active-40 text-cream",
     component: VerificationEmail,
-    layout: "/auth"
+    layout: "/auth-verifemail"
   },
   {
     path: "/verification-success",

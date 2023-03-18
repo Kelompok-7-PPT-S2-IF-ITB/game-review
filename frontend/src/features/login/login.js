@@ -47,7 +47,7 @@ import "layouts/style-auth.css"
                 <h1 className="text-register" href="./registration"> Register here</h1>
               </div>
               <div className="btn-wrapper text-center">
-                c
+                
                 {/* <Button
                   className="button-fb"
                   color="default"

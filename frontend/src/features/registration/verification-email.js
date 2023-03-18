@@ -32,7 +32,7 @@ import {
   Col
 } from "reactstrap";
 
-import "./style.css"
+import "layouts/style-auth-verifemail.css"
 
 const VerificationEmail = () => {
   return (

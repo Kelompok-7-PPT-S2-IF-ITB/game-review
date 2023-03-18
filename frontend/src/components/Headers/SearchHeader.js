@@ -18,6 +18,7 @@
 
 // reactstrap components
 import { Button, Container, Row, Col, Form, FormGroup, InputGroup,InputGroupAddon, InputGroupText,Input } from "reactstrap";
+import "components/Headers/styleheader.css"
 
 const SearchHeader = () => {
   return (
@@ -25,15 +26,15 @@ const SearchHeader = () => {
       <div
         className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
         style={{
-          minHeight: "600px",
+          minHeight: "750px",
           backgroundImage:
-            "url(" + require("../../assets/img/theme/profile-cover.jpg") + ")",
+            "url(" + require("../../assets/img/figma/searchpage.png") + ")",
           backgroundSize: "cover",
           backgroundPosition: "center top"
         }}
       >
         {/* Mask */}
-        <span className="mask bg-gradient-default opacity-8" />
+        <span className="mask bg-gradient-default opacity-1" />
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
@@ -43,8 +44,8 @@ const SearchHeader = () => {
               Dapatkan informasi seputar game kesukaan anda hanya dengan sekali tekan
 
               </p> */}
-                        <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-            <FormGroup className="mb-0 ">
+        <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+            <FormGroup className="buttonsearchpage ">
               <InputGroup className="input-group-alternative">
                 <InputGroupAddon addonType="prepend">
                   <InputGroupText>

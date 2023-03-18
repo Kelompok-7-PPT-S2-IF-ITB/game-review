@@ -26,6 +26,7 @@ import "assets/scss/argon-dashboard-react.scss";
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
 import AuthRegisLayout from "layouts/Auth-regis.js";
+import AuthVerifEmail from "layouts/Auth-verifemail.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -35,6 +36,7 @@ root.render(
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
       <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
       <Route path="/auth-regis" render={(props) => <AuthRegisLayout {...props} />} />
+      <Route path="/auth-verifemail" render={(props) => <AuthVerifEmail {...props} />} />
       <Redirect from="/" to="/admin/index" />
     </Switch>
   </BrowserRouter>

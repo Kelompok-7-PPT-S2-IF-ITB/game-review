@@ -141,7 +141,7 @@ const ReviewGame = (props) => {
                 </FormGroup>
                   <div className="col text-left">
                     <Button
-                      color="primary"
+                      color="default"
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                       size="sm"
@@ -170,7 +170,7 @@ const ReviewGame = (props) => {
                   </div>
                   <div className="col text-right">
                     <Button
-                      color="primary"
+                      color="default"
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                       size="sm"

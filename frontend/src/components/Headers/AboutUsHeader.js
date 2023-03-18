@@ -25,15 +25,15 @@ const AboutUsHeader = () => {
       <div
         className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
         style={{
-          minHeight: "600px",
+          minHeight: "750px",
           backgroundImage:
-            "url(" + require("../../assets/img/theme/profile-cover.jpg") + ")",
+            "url(" + require("../../assets/img/figma/about-us/aboutus.png") + ")",
           backgroundSize: "cover",
           backgroundPosition: "center top"
         }}
       >
         {/* Mask */}
-        <span className="mask bg-gradient-default opacity-8" />
+        <span className="mask bg-gradient-default opacity-1" />
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
