@@ -1,0 +1,22 @@
+.button-search{
+/* Wanna Play a Game? */
+
+position: absolute;
+width: 200px;
+height: 50px;
+left: 820px;
+top: 250px;
+
+background: #618FB6;
+    }
+.buttonsearchpage{
+    /* Rectangle 30 */
+
+
+    position: absolute;
+    width: 846px;
+    height: 126px;
+    left: 370px;
+    top: -70px;
+    border-radius: 50px;
+}
