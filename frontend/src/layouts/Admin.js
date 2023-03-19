@@ -25,6 +25,7 @@ import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
+import menuSideBar from "menu-sidebar.js"
 
 const Admin = (props) => {
   const mainContent = React.useRef(null);
@@ -68,10 +69,10 @@ const Admin = (props) => {
     <>
       <Sidebar
         {...props}
-        routes={routes}
+        routes={menuSideBar}
         logo={{
           innerLink: "/admin/index",
-          imgSrc: require("../assets/img/brand/argon-react.png"),
+          imgSrc: require("../assets/img/figma/logoitb.png"),
           imgAlt: "..."
         }}
       />

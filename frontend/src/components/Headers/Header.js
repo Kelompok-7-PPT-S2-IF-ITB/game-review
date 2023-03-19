@@ -38,6 +38,10 @@ const Header = () => {
                         >
                           Traffic
                         </CardTitle>
+                        <img
+                          alt="Sample"
+                          src="assets/img/figma/account.png"
+                        />
                         <span className="h2 font-weight-bold mb-0">
                           350,897
                         </span>
