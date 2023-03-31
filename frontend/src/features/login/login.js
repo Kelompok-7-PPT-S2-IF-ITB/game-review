@@ -103,9 +103,10 @@ import "layouts/style-auth.css"
                       </InputGroupText> */}
                     </InputGroupAddon>
                     <Input
-                      placeholder="      Email"
+                      placeholder="Email"
                       type="email"
                       autoComplete="new-email"
+                      className="text-input"
                     />
                   </InputGroup>
                 </FormGroup>
@@ -117,9 +118,10 @@ import "layouts/style-auth.css"
                       </InputGroupText> */}
                     </InputGroupAddon>
                     <Input
-                      placeholder="      Password"
+                      placeholder="Password"
                       type="password"
                       autoComplete="new-password"
+                      className="text-input"
                     />
                   </InputGroup>
                 </FormGroup>
