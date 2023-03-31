@@ -29,7 +29,9 @@ import {
     InputGroupText,
     InputGroup,
     Row,
-    Col
+    Col,
+    Nav,
+    NavLink
   } from "reactstrap";
 import "layouts/style-auth.css"
 
@@ -44,7 +46,14 @@ import "layouts/style-auth.css"
                 <h1 className="text-insertlogin"> Enter your email and password to sign in</h1>
                 <h1 className="text-or"> Or</h1>
                 <h1 className="text-dont"> Don’t have any accounts?</h1>
-                <h1 className="text-register" href="./registration"> Register here</h1>
+                <Nav>
+                  <NavLink
+                  active
+                  href="/auth-regis/registration">
+                   <h1 className="text-register"> Register here</h1>
+                   
+                  </NavLink>
+                </Nav>
               </div>
               <div className="btn-wrapper text-center">
                 

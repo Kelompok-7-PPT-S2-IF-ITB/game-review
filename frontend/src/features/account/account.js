@@ -29,7 +29,8 @@ import {
     Row,
     Col,
     CardTitle,
-    Table
+    Table,
+    CardImg
   } from "reactstrap";
   // core components
   import UserHeader from "components/Headers/UserHeader.js";
@@ -160,6 +161,11 @@ import {
                         >
                           Traffic
                         </CardTitle>
+                        <CardImg
+                           alt="..."
+                           src={require("../../assets/img/theme/angular.jpg")}
+                           top
+                        ></CardImg>
                         <span className="h2 font-weight-bold mb-0">
                           350,897
                         </span>

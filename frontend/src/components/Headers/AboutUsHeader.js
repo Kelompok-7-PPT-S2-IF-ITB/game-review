@@ -43,7 +43,7 @@ const AboutUsHeader = () => {
                 Hello There
                 
                 Kami adalah sebuah platform yang memberikan ulasan beragam game yang disediakan 
-                leh STEAM dengan akurasi yang tinggi. Kami bertujuan untuk membantu kalian para 
+                oleh STEAM dengan akurasi yang tinggi. Kami bertujuan untuk membantu kalian para 
                 gamers untuk melakukan pertimbangan dalam pembelian game. 
 
                 Terus gunakan layanan kami dan nantikan pengembangan fitur kami lainnya!

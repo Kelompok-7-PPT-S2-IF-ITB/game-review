@@ -18,13 +18,42 @@
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { UncontrolledCarousel} from "reactstrap";
 
+// const items = [
+//   {
+//     src: require("../../assets/img/theme/angular.jpg"),
+//     altText: "Slide 1",
+//     caption: "",
+//     header: "",
+//     key: "1",
+//   },
+//   {
+//     src: require("../../assets/img/theme/bootstrap.jpg"),
+//     altText: "Slide 2",
+//     caption: "",
+//     header: "",
+//     key: "2",
+//   },
+//   {
+//     src: require("../../assets/img/theme/react.jpg"),
+//     altText: "Slide 3",
+//     caption: "",
+//     header: "",
+//     key: "3",
+//   },
+// ];
 const Header = () => {
   return (
     <>
       <div className="header bg-gradient-default pb-8 pt-5 pt-md-8">
         <Container fluid>
           <div className="header-body">
+          {/* <Row>
+            <Col md="8" className="mx-auto">
+              <UncontrolledCarousel items={items} />
+            </Col>
+         </Row> */}
             {/* Card stats */}
             <Row>
               <Col lg="6" xl="3">
