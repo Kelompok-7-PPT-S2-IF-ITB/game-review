@@ -30,7 +30,11 @@ import {
     Col,
     CardTitle,
     Table,
-    CardImg
+    CardImg,
+    CardFooter,
+    Pagination,
+    PaginationItem,
+    PaginationLink
   } from "reactstrap";
   // core components
   import UserHeader from "components/Headers/UserHeader.js";
@@ -151,119 +155,101 @@ import {
                     </Col>
                     <Row>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card 
+                className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
                       <div className="col">
                         <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
+                        
+                          className="h4 font-weight-bold mb-2"
                         >
-                          Traffic
+                          Nama Game
                         </CardTitle>
                         <CardImg
                            alt="..."
-                           src={require("../../assets/img/theme/angular.jpg")}
+                           src={require("../../assets/img/games/example_game.png")}
                            top
                         ></CardImg>
-                        <span className="h2 font-weight-bold mb-0">
-                          350,897
-                        </span>
                       </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-                          <i className="fas fa-chart-bar" />
-                        </div>
-                      </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-success mr-2">
-                        <i className="fa fa-arrow-up" /> 3.48%
-                      </span>{" "}
+                      <span className="text-nowrap">Since last month</span>
+                    </p>
+                  </CardBody>
+                </Card>
+              </Col>
+            
+              <Col lg="6" xl="3">
+                <Card 
+                className="card-stats mb-4 mb-xl-0">
+                  <CardBody>
+                    <Row>
+                      <div className="col">
+                        <CardTitle
+                        
+                          className="h4 font-weight-bold mb-2"
+                        >
+                          Nama Game
+                        </CardTitle>
+                        <CardImg
+                           alt="..."
+                           src={require("../../assets/img/games/example_game.png")}
+                           top
+                        ></CardImg>
+                      </div>
+                    </Row>
+                    <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </CardBody>
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card 
+                className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
                       <div className="col">
                         <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
+                        
+                          className="h4 font-weight-bold mb-2"
                         >
-                          New users
+                          Nama Game
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">2,356</span>
+                        <CardImg
+                           alt="..."
+                           src={require("../../assets/img/games/example_game.png")}
+                           top
+                        ></CardImg>
                       </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-warning text-white rounded-circle shadow">
-                          <i className="fas fa-chart-pie" />
-                        </div>
-                      </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-danger mr-2">
-                        <i className="fas fa-arrow-down" /> 3.48%
-                      </span>{" "}
-                      <span className="text-nowrap">Since last week</span>
+                      <span className="text-nowrap">Since last month</span>
                     </p>
                   </CardBody>
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card 
+                className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
                       <div className="col">
                         <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
+                        
+                          className="h4 font-weight-bold mb-2"
                         >
-                          Sales
+                          Nama Game
                         </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">924</span>
+                        <CardImg
+                           alt="..."
+                           src={require("../../assets/img/games/example_game.png")}
+                           top
+                        ></CardImg>
                       </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                          <i className="fas fa-users" />
-                        </div>
-                      </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-warning mr-2">
-                        <i className="fas fa-arrow-down" /> 1.10%
-                      </span>{" "}
-                      <span className="text-nowrap">Since yesterday</span>
-                    </p>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
-                  <CardBody>
-                    <Row>
-                      <div className="col">
-                        <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
-                        >
-                          Performance
-                        </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">49,65%</span>
-                      </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-info text-white rounded-circle shadow">
-                          <i className="fas fa-percent" />
-                        </div>
-                      </Col>
-                    </Row>
-                    <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-success mr-2">
-                        <i className="fas fa-arrow-up" /> 12%
-                      </span>{" "}
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </CardBody>
@@ -289,7 +275,7 @@ import {
                         </thead>
                         <tbody>
                           <tr>
-                            <th scope="row">/argon/</th>
+                            <th scope="row">Your Review Game</th>
                             {/* <td>4,569</td>
                             <td>340</td>
                             <td>
@@ -297,7 +283,7 @@ import {
                             </td> */}
                           </tr>
                           <tr>
-                            <th scope="row">/argon/</th>
+                            <th scope="row">Your Review Game</th>
                             {/* <td>4,569</td>
                             <td>340</td>
                             <td>
@@ -305,7 +291,7 @@ import {
                             </td> */}
                           </tr>
                           <tr>
-                            <th scope="row">/argon/</th>
+                            <th scope="row">Your Review Game</th>
                             {/* <td>4,569</td>
                             <td>340</td>
                             <td>
@@ -313,31 +299,7 @@ import {
                             </td> */}
                           </tr>
                           <tr>
-                            <th scope="row">/argon/</th>
-                            {/* <td>4,569</td>
-                            <td>340</td>
-                            <td>
-                              <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
-                            </td> */}
-                          </tr>
-                          <tr>
-                            <th scope="row">/argon/</th>
-                            {/* <td>4,569</td>
-                            <td>340</td>
-                            <td>
-                              <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
-                            </td> */}
-                          </tr>
-                          <tr>
-                            <th scope="row">/argon/</th>
-                            {/* <td>4,569</td>
-                            <td>340</td>
-                            <td>
-                              <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
-                            </td> */}
-                          </tr>
-                          <tr>
-                            <th scope="row">/argon/</th>
+                            <th scope="row">Your Review Game</th>
                             {/* <td>4,569</td>
                             <td>340</td>
                             <td>
@@ -345,6 +307,58 @@ import {
                             </td> */}
                           </tr>
                         </tbody>
+                        <CardFooter className="py-4">
+                  <nav aria-label="...">
+                    <Pagination
+                      className="pagination justify-content-end mb-0"
+                      listClassName="justify-content-end mb-0"
+                    >
+                      <PaginationItem className="disabled">
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                          tabIndex="-1"
+                        >
+                          <i className="fas fa-angle-left" />
+                          <span className="sr-only">Previous</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem className="active">
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          1
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          2 <span className="sr-only">(current)</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          3
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <i className="fas fa-angle-right" />
+                          <span className="sr-only">Next</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                    </Pagination>
+                  </nav>
+                </CardFooter>
                       </Table>
                       {/* <Row>
                         <Col lg="10">

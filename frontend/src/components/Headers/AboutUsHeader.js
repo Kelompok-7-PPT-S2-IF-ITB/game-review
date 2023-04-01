@@ -40,7 +40,7 @@ const AboutUsHeader = () => {
             <Col lg="7" md="10">
               <h1 className="display-2 text-white">ABOUT US</h1>
               <p className="text-white mt-0 mb-5">
-                Hello There
+                Hello There,
                 
                 Kami adalah sebuah platform yang memberikan ulasan beragam game yang disediakan 
                 oleh STEAM dengan akurasi yang tinggi. Kami bertujuan untuk membantu kalian para 

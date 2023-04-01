@@ -345,7 +345,7 @@ let chartExample1 = {
   },
   data1: (canvas) => {
     return {
-      labels: ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      labels: ["Positive", "Negative", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       datasets: [
         {
           label: "Performance",
@@ -400,11 +400,11 @@ let chartExample2 = {
     }
   },
   data: {
-    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["Positive", "Negative"],
     datasets: [
       {
         label: "Sales",
-        data: [25, 20, 30, 22, 17, 29],
+        data: [90, 10],
         maxBarThickness: 10
       }
     ]

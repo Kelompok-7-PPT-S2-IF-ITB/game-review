@@ -37,7 +37,13 @@ import {
   Row,
   Col,
   Input,
-  FormGroup
+  FormGroup,
+  CardImg,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
+  CardFooter,
+  Badge
 } from "reactstrap";
 
 // core components
@@ -46,10 +52,9 @@ import {
   parseOptions,
   chartExample1,
   chartExample2,
-  CardImg
 } from "variables/charts.js";
 
-import Header from "components/Headers/Header.js";
+import ReviewGameHeader from "components/Headers/ReviewGameHeader.js";
 
 const ReviewGame = (props) => {
   const [activeNav, setActiveNav] = useState(1);
@@ -66,30 +71,72 @@ const ReviewGame = (props) => {
   };
   return (
     <>
-      <Header />
+      <ReviewGameHeader />
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
-          <Col className="mb-5 mb-xl-0" xl="8">
+          <Col className="mb-8 mb-xl-0" xl="7">
             <Card className="bg-gradient-default shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">
+                  <CardImg
+                           alt="..."
+                           src={require("../../assets/img/games/example_game.png")}
+                           top
+                  ></CardImg>
+                    <p></p>
                     <h2 className="text-white mb-0">Nama Games</h2>
                     <p className="text-white mb-0"> Deskripsi Games</p>
+                    <p className="text-white mb-0"> </p>
+                    <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="secondary" className="badge-dot mr-4">
+                          <i className="bg-secondary" />
+                          Price Rp 200 0000
+                        </Badge>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="secondary" className="badge-dot mr-4">
+                          <i className="bg-secondary" />
+                          Released Date 22 Maret 2023
+                        </Badge>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="secondary" className="badge-dot mr-4">
+                          <i className="bg-secondary" />
+                          Developer Valve
+                        </Badge>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="secondary" className="badge-dot mr-4">
+                          <i className="bg-secondary" />
+                          Publisher Valve
+                        </Badge>
+                        </div>
+                      </td>
+                  </tr>
                   </div>
                 </Row>
               </CardHeader>
               <CardBody>
-              {/* <CardImg
-                  alt="..."
-                  src={require("../../assets/img/theme/team-4-800x800.jpg")}
-                  top
-              /> */}
               </CardBody>
             </Card>
           </Col>
-          <Col xl="4">
+          <Col xl="5">
             <Card className="shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
@@ -108,6 +155,68 @@ const ReviewGame = (props) => {
                  id="chart-pie"
                />
                 </div>
+              
+
+                <Table className="align-items-center table-flush" responsive>
+                <thead className="thead-light">
+                  <tr>
+                    {/* <th scope="col">Page name</th> */}
+                    {/* <th scope="col">Visitors</th>
+                    <th scope="col">Unique users</th>
+                    <th scope="col">Bounce rate</th> */}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="" className="badge-dot mr-4">
+                          <i className="bg-info" />
+                          Positive
+                        </Badge>
+                          <span className="mr-2">90%</span>
+                          <div>
+                            <Progress
+                              max="100"
+                              value="90"
+                              barClassName="bg-info"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="" className="badge-dot mr-4">
+                          <i className="bg-danger" />
+                          Negative
+                        </Badge>
+                          <span className="mr-2">30%</span>
+                          <div>
+                            <Progress
+                              max="100"
+                              value="30"
+                              barClassName="bg-danger"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div className="d-flex align-items-center">
+                        <Badge color="" className="badge-dot mr-4">
+                          <i className="bg-success" />
+                          All Reviews 7.888.000
+                        </Badge>
+                        </div>
+                      </td>
+                  </tr>
+                  </tbody>
+                  </Table>
+
+
               </CardBody>
             </Card>
           </Col>
@@ -148,7 +257,7 @@ const ReviewGame = (props) => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      Post
+                      Post Review
                     </Button>
                   </div>
                   <thead className="thead-light">
@@ -169,16 +278,7 @@ const ReviewGame = (props) => {
                 <Row className="align-items-center">
                   <div className="col">
                     <h3 className="mb-0">Recent Post</h3>
-                  </div>
-                  <div className="col text-right">
-                    <Button
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      See all
-                    </Button>
+                    <h5 className="mb-2 text-muted">7.888.000 Reviews</h5>
                   </div>
                 </Row>
               </CardHeader>
@@ -193,7 +293,7 @@ const ReviewGame = (props) => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -201,7 +301,7 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -209,7 +309,7 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -217,7 +317,7 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -225,7 +325,7 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -233,7 +333,7 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
@@ -241,13 +341,65 @@ const ReviewGame = (props) => {
                     </td> */}
                   </tr>
                   <tr>
-                    <th scope="row">/argon/</th>
+                    <th scope="row">Review Game</th>
                     {/* <td>4,569</td>
                     <td>340</td>
                     <td>
                       <i className="fas fa-arrow-up text-success mr-3" /> 46,53%
                     </td> */}
                   </tr>
+                  <CardFooter className="py-4">
+                  <nav aria-label="...">
+                    <Pagination
+                      className="pagination justify-content-end mb-0"
+                      listClassName="justify-content-end mb-0"
+                    >
+                      <PaginationItem className="disabled">
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                          tabIndex="-1"
+                        >
+                          <i className="fas fa-angle-left" />
+                          <span className="sr-only">Previous</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem className="active">
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          1
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          2 <span className="sr-only">(current)</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          3
+                        </PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink
+                          href="#pablo"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <i className="fas fa-angle-right" />
+                          <span className="sr-only">Next</span>
+                        </PaginationLink>
+                      </PaginationItem>
+                    </Pagination>
+                  </nav>
+                </CardFooter>
                 </tbody>
               </Table>
             </Card>
