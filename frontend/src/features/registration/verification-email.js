@@ -37,12 +37,12 @@ import "layouts/style-auth-verifemail.css"
 const VerificationEmail = () => {
   return (
     <>
-      <Col lg="6" md="8">
-      <div className="button-verifemail">
-                <Button className="mt-4" color="primary" type="button" href="./verification-success">
-                  Click to verivy
-                </Button>
-              </div>
+      <Col lg="6" md="8">        
+        <div className="text-center">
+          <Button className="button-verifemail" type="button" href="./verification-success">
+            Click to verivy
+          </Button>
+        </div>                    
       </Col>
     </>
   );
