@@ -99,7 +99,7 @@ const Registration = () => {
               </FormGroup>
             
               <div className="text-center">
-                <Button className="button-create" type="button">
+                <Button className="button-create" type="button" href="/auth-verifemail/verification-email">
                   Create account
                 </Button>
               </div>
