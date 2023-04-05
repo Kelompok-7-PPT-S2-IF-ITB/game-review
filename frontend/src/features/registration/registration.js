@@ -33,6 +33,30 @@ import {
 } from "reactstrap";
 
 import "layouts/style-regis.css"
+import swal from 'sweetalert';
+
+const removeData = ()=>{
+  swal({
+    title: "Verifikasi?",
+    text: "Verivy your email address and complete your registration",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("Verification Success", {
+        icon: "success", 
+      })
+      .then(function() {
+        window.location = "/admin/dashboard";
+    });
+    } else {
+      swal("Your imaginary file is safe!");
+    }
+  });
+  return;
+}
 
 const Registration = () => {
   return (
@@ -97,9 +121,12 @@ const Registration = () => {
                   />
                 </InputGroup>
               </FormGroup>
-            
               <div className="text-center">
-                <Button className="button-create" type="button">
+                <Button className="button-create" type="button"
+                onClick={() => {
+                  removeData()
+                 }}
+                >
                   Create account
                 </Button>
               </div>
