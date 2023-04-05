@@ -122,11 +122,15 @@ const Registration = () => {
                 </InputGroup>
               </FormGroup>
               <div className="text-center">
+<<<<<<< HEAD
                 <Button className="button-create" type="button"
                 onClick={() => {
                   removeData()
                  }}
                 >
+=======
+                <Button className="button-create" type="button" href="/auth-verifemail/verification-email">
+>>>>>>> 57d2d3a16b7f5bc21fffd7a73482cec48b36111e
                   Create account
                 </Button>
               </div>

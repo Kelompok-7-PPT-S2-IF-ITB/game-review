@@ -53,7 +53,7 @@
     position: absolute;
     width: 195px;
     height: 60px;
-    left: 260px;
+    left: 26+0px;
     top: 230px;
 }
 
@@ -95,6 +95,8 @@
     height: 60px;
     left: 40px;
     top: 550px;
-
+    text-align: center
+    4
+    t;
     background-color: #473153;
 }
