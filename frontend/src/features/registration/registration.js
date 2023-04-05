@@ -35,9 +35,6 @@ import {
 } from "reactstrap";
 
 import "layouts/style-regis.css"
-<<<<<<< HEAD
-// import { NavLink } from "react-router-dom";
-=======
 import swal from 'sweetalert';
 
 const removeData = ()=>{
@@ -62,7 +59,6 @@ const removeData = ()=>{
   });
   return;
 }
->>>>>>> 16061831d97e12061acb55ddcfb6f09dedb5fab6
 
 const Registration = () => {
   return (
