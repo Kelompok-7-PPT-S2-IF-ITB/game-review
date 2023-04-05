@@ -29,10 +29,13 @@ import {
   InputGroupText,
   InputGroup,
   Row,
-  Col
+  Col,
+  Nav,
+  NavLink
 } from "reactstrap";
 
 import "layouts/style-regis.css"
+// import { NavLink } from "react-router-dom";
 
 const Registration = () => {
   return (
@@ -41,7 +44,13 @@ const Registration = () => {
         <Card className="card-regis">                            
           <CardBody className="px-lg-5 py-lg-5">
             <div>            
-              <h1 className="text-login">Login here</h1>
+              <nav>
+                <NavLink
+                active
+                href="/auth/login">
+                  <h1 className="text-login">Login here</h1>
+                </NavLink>
+              </nav>
             </div>
             <Form role="form">
               <FormGroup>

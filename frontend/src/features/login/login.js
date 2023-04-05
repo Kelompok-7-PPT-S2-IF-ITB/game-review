@@ -55,43 +55,7 @@ import "layouts/style-auth.css"
                   </NavLink>
                 </Nav>
               </div>
-              <div className="btn-wrapper text-center">
-                
-                {/* <Button
-                  className="button-fb"
-                  color="default"
-                  href=""
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={
-                        require("../../assets/img/icons/common/github.svg")
-                          .default
-                      }
-                    />
-                  </span>
-                  <span className="button-fb-img"></span>
-                </Button> */}
-                {/* <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={
-                        require("../../assets/img/icons/common/google.svg")
-                          .default
-                      }
-                    />
-                  </span>
-                  <span className="btn-inner--text">Google</span>
-                </Button> */}
-              </div>
+              <div className="btn-wrapper text-center"></div>
             </CardHeader>
             <CardBody className="px-lg-5 py-lg-5">
               <Form role="form">
