@@ -66,11 +66,6 @@ const AuthVerifEmail = (props) => {
       <div className="background-img" ref={mainContent}>
         <AuthNavbar />
         <div className="background-img">
-          <img
-            alt="..."
-            src={require("../assets/img/figma/verification-send.png")}
-            className="background-img"
-          />
         </div>
         
         <Container className="mt--8 pb-5">
