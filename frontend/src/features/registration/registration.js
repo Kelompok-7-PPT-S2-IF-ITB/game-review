@@ -35,7 +35,34 @@ import {
 } from "reactstrap";
 
 import "layouts/style-regis.css"
+<<<<<<< HEAD
 // import { NavLink } from "react-router-dom";
+=======
+import swal from 'sweetalert';
+
+const removeData = ()=>{
+  swal({
+    title: "Verifikasi?",
+    text: "Verivy your email address and complete your registration",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("Verification Success", {
+        icon: "success", 
+      })
+      .then(function() {
+        window.location = "/admin/dashboard";
+    });
+    } else {
+      swal("Your imaginary file is safe!");
+    }
+  });
+  return;
+}
+>>>>>>> 16061831d97e12061acb55ddcfb6f09dedb5fab6
 
 const Registration = () => {
   return (
@@ -106,9 +133,16 @@ const Registration = () => {
                   />
                 </InputGroup>
               </FormGroup>
-            
               <div className="text-center">
+<<<<<<< HEAD
+                <Button className="button-create" type="button"
+                onClick={() => {
+                  removeData()
+                 }}
+                >
+=======
                 <Button className="button-create" type="button" href="/auth-verifemail/verification-email">
+>>>>>>> 57d2d3a16b7f5bc21fffd7a73482cec48b36111e
                   Create account
                 </Button>
               </div>
