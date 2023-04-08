@@ -37,16 +37,16 @@ import {
 import "layouts/style-regis.css"
 import swal from 'sweetalert';
 
-const removeData = ()=>{
+const verifData = ()=>{
   swal({
     title: "Verifikasi?",
-    text: "Verivy your email address and complete your registration",
+    text: "Verify your email address and complete your registration",
     icon: "warning",
     buttons: true,
     dangerMode: true,
   })
-  .then((willDelete) => {
-    if (willDelete) {
+  .then((willVerif) => {
+    if (willVerif) {
       swal("Verification Success", {
         icon: "success", 
       })
@@ -54,7 +54,7 @@ const removeData = ()=>{
         window.location = "/admin/dashboard";
     });
     } else {
-      swal("Your imaginary file is safe!");
+      swal("Verification Failed");
     }
   });
   return;
@@ -132,7 +132,7 @@ const Registration = () => {
               <div className="text-center">
                 <Button className="button-create" type="button"
                 onClick={() => {
-                  removeData()
+                  verifData()
                  }}
                 >
                   Create account

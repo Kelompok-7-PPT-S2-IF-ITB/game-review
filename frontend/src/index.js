@@ -37,7 +37,7 @@ root.render(
       <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
       <Route path="/auth-regis" render={(props) => <AuthRegisLayout {...props} />} />
       <Route path="/auth-verifemail" render={(props) => <AuthVerifEmail {...props} />} />
-      <Redirect from="/" to="/admin/index" />
+      <Redirect from="/" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>
 );
