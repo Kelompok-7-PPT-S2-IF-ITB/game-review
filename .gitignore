@@ -1,0 +1,11 @@
+.vscode
+.mypy_cache
+docker-stack.yml
+code-server/
+CachedExtensions/
+logs/
+coder.json
+machineid
+User/
+extensions/
+node_modules/
