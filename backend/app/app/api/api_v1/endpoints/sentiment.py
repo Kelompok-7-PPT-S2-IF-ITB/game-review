@@ -16,8 +16,8 @@ def sentiment_celery(
     current_user: models.User = Depends(deps.get_db),
 ) -> Any:
     """
-    Test Celery worker.
+    Inference using Celery worker.
     """
     result = celery_app.send_task("app.worker.process_sentiment", args=[reviews.review])
     returned_values = result.get()
-    return JSONResponse({"review": returned_values})
+    return JSONResponse({"review": reviews.review, "sentiment": returned_values})

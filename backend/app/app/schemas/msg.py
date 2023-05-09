@@ -6,3 +6,6 @@ class Msg(BaseModel):
 
 class Reviews(BaseModel):
     review: str
+
+class ReviewResponse(Reviews):
+    sentiment: str
