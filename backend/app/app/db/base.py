@@ -3,3 +3,5 @@
 from app.db.base_class import Base  # noqa
 from app.models.item import Item  # noqa
 from app.models.user import User  # noqa
+from app.models.sentiment import Sentiment # noqa
+from app.models.games import Games # noqa
