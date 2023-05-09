@@ -6,6 +6,9 @@ class SentimentBase(BaseModel):
     sentiment_id = int
     sentiment_class = Optional[int]
 
+    class Config:
+        arbitrary_types_allowed = True
+
 class SentimentCreate(SentimentBase):
     review = Optional[str]
 
