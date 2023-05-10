@@ -1,4 +1,4 @@
-from nltk.stem import WordNetLemmatizer
+# from nltk.stem import WordNetLemmatizer
 
 import os
 import gc
@@ -11,7 +11,7 @@ from transformers import BertTokenizer, BertModel
 # from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score, confusion_matrix
 from tqdm import tqdm, trange
 
-from app.ai.preprocess import remove_emoji, remove_hashtag, remove_links, remove_money, remove_punct, remove_titiktitik, fix_typo
+from .preprocess import remove_emoji, remove_hashtag, remove_links, remove_money, remove_punct, remove_titiktitik, fix_typo
 
 os.environ["CUDA_LAUNCH_BLOCKING"]="1"
 
@@ -19,7 +19,7 @@ MAX_LEN = 128
 NUM_LABELS = 2
 BATCH = 64
 DEVICE_USED = "cuda:0"
-PROPOSED_MODEL_DIR = "D:/Training/Machine Learning/NLP/Sentiment Analysis/proposed_model/bilstm-crf-4-last-hidden-states-holdout/trainer"
+PROPOSED_MODEL_DIR = "ai/model/bilstm-crf-4-last-hidden-states-holdout/trainer"
 MODEL_PATH = "D:/Training/Machine Learning/NLP/Sentiment Analysis/proposed_model"
 device = torch.device(DEVICE_USED if torch.cuda.is_available() else "cpu")
 
@@ -110,8 +110,8 @@ def inference(input_review: str) -> str:
     stop = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', "you're", "you've", "you'll", "you'd", 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', "she's", 'her', 'hers', 'herself', 'it', "it's", 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', "that'll", 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', "don't", 'should', "should've", 'now', 'd', 'll', 'm', 'o', 're', 've', 'y']
     input_review = " ".join(word for word in input_review.split() if word not in stop)
 
-    lemmatizer = WordNetLemmatizer()
-    input_review = " ".join(lemmatizer.lemmatize(word) for word in input_review.split())
+    # lemmatizer = WordNetLemmatizer()
+    # input_review = " ".join(lemmatizer.lemmatize(word) for word in input_review.split())
 
     # Tokenizing
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', model_max_length=MAX_LEN)
@@ -149,7 +149,7 @@ def inference(input_review: str) -> str:
     word_embed_4_last_layers = word_embed_4_last_layers.to(device)
 
     # loading model
-    chkpt = torch.load(PROPOSED_MODEL_DIR + "/pytorch_model.bin")
+    chkpt = torch.load(PROPOSED_MODEL_DIR + "/pytorch_model.bin", map_location=torch.device('cpu'))
     proposed_method3a = ProposedModel3(
         p_dropout = 0.55,
         lstm_in_size = 768,

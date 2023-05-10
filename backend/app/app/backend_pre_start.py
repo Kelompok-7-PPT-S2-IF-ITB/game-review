@@ -1,4 +1,5 @@
 import logging
+# import nltk
 
 from tenacity import after_log, before_log, retry, stop_after_attempt, wait_fixed
 
@@ -30,6 +31,8 @@ def init() -> None:
 def main() -> None:
     logger.info("Initializing service")
     init()
+    # Download NLTK
+    # nltk.download('wordnet')
     logger.info("Service finished initializing")
 
 
