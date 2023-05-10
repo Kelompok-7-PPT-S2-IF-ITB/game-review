@@ -1,4 +1,5 @@
 import logging
+import nltk
 
 from app.db.init_db import init_db
 from app.db.session import SessionLocal
@@ -15,6 +16,8 @@ def init() -> None:
 def main() -> None:
     logger.info("Creating initial data")
     init()
+    # Download NLTK
+    nltk.download('all-corpora')
     logger.info("Initial data created")
 
 
