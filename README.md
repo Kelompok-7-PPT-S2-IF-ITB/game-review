@@ -1,4 +1,4 @@
-# gamereview
+# sentiment_analysis_of_game_reviews_using_BERT+BiLSTM+CRF
 
 ## Backend Requirements
 
