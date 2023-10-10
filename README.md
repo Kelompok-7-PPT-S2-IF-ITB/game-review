@@ -1,4 +1,4 @@
-# sentiment_analysis_of_game_reviews_using_BERT+BiLSTM+CRF
+# Sentiment Analysis of Game Reviews on STEAM using BERT+BiLSTM+CRF
 
 ## Backend Requirements
 
